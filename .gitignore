@@ -1,0 +1,15 @@
+*.gem
+*.rbc
+/.bundle/
+/vendor/bundle
+/.config
+/coverage/
+/pkg/
+/spec/reports/
+/tmp/
+
+.env
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
