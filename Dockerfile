@@ -11,4 +11,6 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["bundle", "exec", "rackup", "-p", "8080", "-o", "0.0.0.0"]
+# Bind the port the platform injects as $PORT; a hardcoded port fails the
+# platform health check when they differ.
+CMD ["sh", "-c", "bundle exec rackup -p ${PORT:-8080} -o 0.0.0.0"]
